@@ -1,4 +1,3 @@
-
 import RatingStarGenerator from '../RatingStars/RatingStars'
 
 const MENU_TYPE = {SMALL: 0,LARGE: 1}

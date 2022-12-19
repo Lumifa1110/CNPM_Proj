@@ -68,7 +68,7 @@ const SellerPage = () => {
                             <div class="card">
                                 <img src={flavorofindia_logo} class="" alt="" />
                             </div>
-                            {/* Hiện các item mà seller đã đăng */}
+                            {/* Hiện các item mà seller đã đăng cũng là Layout Default của seller */}
                             <a href="/seller" class="list-group-item list-group-item-action nav-item d-flex align-content-center justify-content-between">
                                 <div class="">
                                     <i class="fa fa-caret-right" aria-hidden="true"></i>
@@ -76,7 +76,7 @@ const SellerPage = () => {
                                 </div>
                                 <span class="badge badge-pill bg-danger float-end text-center">{foods.length}</span>
                             </a>
-                            {/* Hiển thị đơn đặt hàng cùng thông báo */}
+                            {/* Tới trang đơn đặt hàng cùng thông báo */}
                             <a href="/seller/orders" class="list-group-item list-group-item-action nav-item d-flex align-content-center justify-content-between">
                                 <div class="">
                                     <i class="fa fa-caret-right" aria-hidden="true"></i>
@@ -84,6 +84,7 @@ const SellerPage = () => {
                                 </div>
                                 <span class="badge badge-pill bg-danger float-end text-center">12</span>
                             </a>
+                            {/* Tới trang Profile của người bán để chỉnh sửa thông tin cửa hàng */}
                             <a href="/seller/profile" class="list-group-item list-group-item-action nav-item d-flex align-content-center justify-content-between">
                                 <div class="">
                                     <i class="fa fa-caret-right" aria-hidden="true"></i>
@@ -105,9 +106,11 @@ const SellerPage = () => {
                             </div>
                             <div class="card-body">
                                 <div class="row">
+                                    {/* Hiện danh sách món ăn của seller */}
                                     <SellerStore foods={foods}/>
                                 </div>
                             </div>
+                            {/* Thanh đổi trang */}
                             <ul class="pagination justify-content-center">
                                 <li class="page-item">
                                     <a class="page-link" href="/seller">Previous</a>

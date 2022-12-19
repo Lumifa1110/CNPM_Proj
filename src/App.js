@@ -9,6 +9,7 @@ import ListItemDetail from './components/ListItemDetail/ListItemDetail'
 import Footer from './components/Footer/Footer'
 import SellerPage from './components/SellerPage/SellerPage';
 import SellerOrderPage from './components/SellerOrderPage/SellerOrderPage';
+import AddItem from './components/AddItem/AddItem';
 
 import {
     BrowserRouter,
@@ -50,6 +51,10 @@ function App() {
                 
                 <Routes>
                     <Route path="/seller/orders" element={<SellerOrderPage/>} />
+                </Routes>
+
+                 <Routes>
+                    <Route path="/seller/add" element={<AddItem/>} />
                 </Routes>
 
                 <Footer/>
