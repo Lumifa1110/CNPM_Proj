@@ -19,7 +19,9 @@ import {
 import BuyDetail from './components/BuyDetail/BuyDetail';
 
 
+const isSeller = true;
 function App() {
+    
     return (
         <BrowserRouter>
             <div className='bg-eee'>
@@ -45,18 +47,19 @@ function App() {
                     <Route path="/list" element={<ListItemDetail/>} />
                 </Routes>
 
-                <Routes>
-                    <Route path="/seller" element={<SellerPage/>} />
-                </Routes>
-                
-                <Routes>
-                    <Route path="/seller/orders" element={<SellerOrderPage/>} />
-                </Routes>
-
-                 <Routes>
-                    <Route path="/seller/add" element={<AddItem/>} />
-                </Routes>
-
+                {
+                    isSeller === true ? (
+                        <Routes>
+                            <Route path="/seller" element={<><Header/><SellerPage/><Footer/></>} />,
+                            <Route path="/seller/add" element={<><Header/><AddItem/><Footer/></>} />
+                            <Route path="/seller/orders" element={<><Header/><SellerOrderPage/><Footer/></>} />
+                            <Route path="/seller/profile" element={<><Header/><Footer/></>} />
+                        </Routes>
+                        
+                    ) : (
+                        <Route path="/seller" element={<><Header/><SellerPage/><Footer/></>} />
+                    )
+                }
                 <Footer/>
             </div>
         </BrowserRouter>
